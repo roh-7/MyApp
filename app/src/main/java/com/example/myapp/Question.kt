@@ -1,5 +1,7 @@
 package com.example.myapp
 
+import java.util.*
+
 /**
  * Created by rohitramaswamy on 11/07/17.
  */
@@ -7,12 +9,13 @@ class Question
 {
 	var number=1
 	var answer = false
-	var mod = 1
+	private var mod = 1
+	private val bound = 1234
 	
 	constructor()
 	{
 		this.mod = 103
-		this.number = ((12345*152+1) % mod).toInt()
+		this.number = getRandomNumber()
 	}
 	
 	fun setAnswer(): Boolean
@@ -24,14 +27,19 @@ class Question
 			{
 				return false
 			}
-			sq--;
+			sq--
 		}
 		return true
 	}
 	
 	fun getNextQuestion()
 	{
-		this.number = ( this.number + 12345*152+1)%mod
+		this.number = getRandomNumber()
 		this.answer = setAnswer()
+	}
+
+	private fun getRandomNumber(): Int
+	{
+		return  Random().nextInt(bound)
 	}
 }
