@@ -68,5 +68,13 @@
 	 android:text = "Answer will be displayed here"
 	 android:textAlignment = "center" />
 
+	<Button
+		android:id = "@+id/resetButton"
+		android:layout_width = "wrap_content"
+		android:layout_height = "wrap_content"
+		android:layout_margin = "8dp"
+		android:background = "#42A5F5"
+		android:text = "@string/resetButton" />
+
 
 </LinearLayout >

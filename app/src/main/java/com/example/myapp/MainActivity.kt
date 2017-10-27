@@ -10,9 +10,9 @@ import org.jetbrains.anko.browse
 
 class MainActivity : AppCompatActivity()
 {
-	val ques = Question()
-	var score: Long = 0
-	val GITHUB_URL: String = "https://github.com/roh-7"
+	private val ques = Question()
+	private var score: Long = 0
+	private val GITHUB_URL: String = "https://github.com/roh-7"
 	
 	override fun onCreate(savedInstanceState: Bundle?)
 	{
@@ -26,17 +26,18 @@ class MainActivity : AppCompatActivity()
 			ques.getNextQuestion()
 			loadQuestion()
 		}
+        resetButton.setOnClickListener { reset() }
 	}
 	
 	override fun onCreateOptionsMenu(menu: Menu?): Boolean
 	{
 		menuInflater.inflate(R.menu.options_menu,menu)
-		return true;
+		return true
 	}
 	
 	override fun onOptionsItemSelected(item: MenuItem?): Boolean
 	{
-		val id = item!!.getItemId()
+		val id = item!!.itemId
 		
 		if(id==R.id.share_options)
 		{
@@ -48,27 +49,37 @@ class MainActivity : AppCompatActivity()
 		return super.onOptionsItemSelected(item)
 	}
 	
-	fun loadQuestion()
+	private fun loadQuestion()
 	{
-		scoreView.setText("Your score is: " + score)
-		questionTextView.setText("Is " + ques.number + " a prime number ?")
+        setScoreViewText()
+        questionTextView.text = "Is " + ques.number + " a prime number ?"
 	}
 	
-	fun checkAnswer(x: Boolean)
+	private fun checkAnswer(x: Boolean)
 	{
 		if (x == ques.answer)
 		{
 			score++
-			answer_text.setText("Thats correct")
+            answer_text.text = "Thats correct"
 			ques.getNextQuestion()
 			loadQuestion()
 		}
 		else
 		{
-			answer_text.setText("Wrong answer")
+            answer_text.text = "Wrong answer"
 			ques.getNextQuestion()
 			loadQuestion()
 		}
 	}
-	
+
+    private fun reset()
+    {
+        score = 0
+        setScoreViewText()
+    }
+
+    private fun setScoreViewText()
+    {
+        scoreView.text = "Your score is: " + score
+    }
 }

@@ -6,6 +6,7 @@
     <string name = "click" >Click Me!</string >
     <string name = "kotlin" >I am learning kotlin.</string >
     <string name = "nextButton" >next</string >
+    <string name = "resetButton" >reset</string >
     <string name = "false_button" >false</string >
     <string name = "true_button" >true</string >
     <string name = "question_text" >Is this a prime number?</string >
