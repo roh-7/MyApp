@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MyApp.iml" filepath="$PROJECT_DIR$/MyApp.iml" />
+      <module fileurl="file://C:\git\Android\Prime-Number-Test\MyApp.iml" filepath="C:\git\Android\Prime-Number-Test\MyApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Prime-Number-Test.iml" filepath="$PROJECT_DIR$/Prime-Number-Test.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

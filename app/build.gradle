@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
-final ANKO_VERSION = '0.8.3'
+final ANKO_VERSION = '0.10.2'
 
 
 android {
