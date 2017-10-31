@@ -7,7 +7,6 @@ import android.view.MenuItem
 import kotlinx.android.synthetic.main.activity_main.*
 import org.jetbrains.anko.browse
 
-
 class MainActivity : AppCompatActivity()
 {
 	val ques = Question()
