@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity()
 	{
 		if (x == ques.answer)
 		{
-			score++
+			score=score+1
 			answer_text.setText("Thats correct")
 			ques.getNextQuestion()
 			loadQuestion()
